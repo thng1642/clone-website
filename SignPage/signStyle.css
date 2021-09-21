@@ -1,0 +1,135 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(170, 201, 170);
+    /* background-image: linear-gradient(to right, rgb(151, 247, 122) 30%, 
+        rgb(209, 232, 195) 50%); */
+}
+.container {
+    position: relative;
+    /* border-style: double; */
+    width: 80%;
+    height: 600px;
+    background-color: white;
+    margin: 80px auto;
+}
+h2 {
+    /* margin-left: 5px; */
+    width: fit-content;
+    display: inline-block;
+    position: absolute;
+    font-size: 37px;
+    z-index: 2;
+    top: 80px;
+    left: 145px;
+}
+.img-right {
+    position: absolute;
+    height: 600px;
+    width: inherit;
+    object-fit: contain;
+    display: inline-block;
+    right: 10px;
+    /* bottom: 10px; */
+}
+.sign-in {
+    position: absolute;
+    display: block;
+    /* border-style: solid;  */
+    /* background-color: rgb(255, 255, 255);    */
+    top: 173px;
+    left: 140px;
+    z-index: 3;
+}
+
+input[type=text], input[type=password] {
+    width: 400px;
+    height: 32px;
+    margin: 15px 5px ;
+    padding: 4px 0 ;
+    border: 1px solid blue;
+    font-size: large;
+    border-radius: 8px;
+}
+
+label {
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: large;
+}
+
+.sign-in input[type=button] {
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    height: 50px;
+    width: 400px;
+    background-color: rgb(49, 49, 224);
+    color: aliceblue;
+    border-radius: 8px;
+    border: none;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.sign-in input[type=button]:hover {
+    background-color: rgb(7, 7, 209);
+}
+
+.gg-sign-up {
+    /* display: block; */
+    border: none;
+    /* background-color: red; */
+    position: absolute;
+    width: fit-content;
+    /* padding: 0 20px; */
+    bottom: 110px;
+    left: 143px;
+    z-index: 2;
+}
+
+.btn-gg-sign-up {
+    display: inline-block;
+    width: 214px;
+    height: 33px;
+    border-radius: 8px;
+    border: 1px solid rgb(95, 135, 221);
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.img-gg {
+    position: absolute;
+    object-fit: contain;
+    width: 20px;
+    height: 20px;
+    left: 11px;
+    top: 6.5px;
+    transition: 0.2s;
+}
+@media (max-width: 768px) {
+    .img-right {
+        margin: auto;
+        object-fit: cover;
+        width: inherit;
+    } 
+    h2 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .sign-in {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .gg-sign-up {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .btn-gg-sign-up {
+        font-weight: 600;
+        color: rgb(7, 12, 34);
+        border: 2px solid rgb(33, 92, 221);
+    }
+}
