@@ -1,8 +1,9 @@
 *{
     box-sizing: border-box;
     color: white;
-    font-family: 'Akaya Kanadaka', cursive;
-    font-family: 'Lora', serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    /* font-family: 'Lora', serif; */
 }
 :root {
     --black: #000;
