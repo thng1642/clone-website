@@ -68,7 +68,7 @@ body {
     flex-direction: column;
     width: 20%;
     height: 1000px;
-    background-color: yellowgreen;
+    // background-color: yellowgreen;
     margin-top: 80px;   
 }
 .my-courses {
@@ -77,15 +77,11 @@ body {
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    background-color: $background-posters;
-    margin: 30px 0;
-    // margin-left: 30px;
+    color: black;
 }
 
 .name-course-content {
-    // margin-left: 30px;
     margin: 10px 0 10px 30px;
-
 }
 .my-courses-img{
     height: 40px;
@@ -114,8 +110,9 @@ body {
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    background-color: $background-posters;
+    // background-color: $background-posters;
     margin: 30px 0;
+    color: black;
 }
 
 .title-my-group {
