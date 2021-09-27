@@ -243,6 +243,18 @@ body {
   margin-left: 5px;
 }
 
+.bt-like:hover {
+  cursor: pointer;
+}
+
+.bt-comment:hover {
+  cursor: pointer;
+}
+
+.bt-share:hover {
+  cursor: pointer;
+}
+
 .container-bt-like:hover {
   background-color: rgba(94, 97, 100, 0.795);
   cursor: pointer;
@@ -296,6 +308,87 @@ body {
   cursor: pointer;
   border-radius: 100rem;
   transform: scale(1.02);
+}
+
+.container-right-bottom {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.bt-arrow-up {
+  height: 50px;
+  width: 60px;
+  border-radius: 100rem;
+  position: absolute;
+  background-color: #1c77c7;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  transition: 0.12s;
+}
+
+#icon-arrow-up, #icon-bell, #icon-add-post {
+  font-size: 36px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  -webkit-user-select: none;
+  /*Safari*/
+  -moz-user-select: none;
+  /*Old FireFox*/
+}
+
+.bt-add-post {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 60px;
+  background-color: #3fdada;
+  border-radius: 100rem;
+  bottom: 65px;
+  right: 0;
+  cursor: pointer;
+  transition: 0.12s;
+}
+
+.bt-add-post:hover, .bt-arrow-up:hover, .bt-bell:hover {
+  transform: scale(1.075);
+  color: red;
+}
+
+.bt-bell {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 60px;
+  background-color: #c5d2e2;
+  border-radius: 100rem;
+  bottom: 130px;
+  right: 0;
+  cursor: pointer;
+  transition: 0.12s;
+}
+
+.number_of_notification {
+  height: 25px;
+  width: 25px;
+  background-color: #85dbbad1;
+  border-radius: 100rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -5%;
+  top: -20%;
 }
 
 /*# sourceMappingURL=style.css.map */
