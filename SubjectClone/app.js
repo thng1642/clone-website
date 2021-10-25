@@ -18,3 +18,27 @@ window.addEventListener("scroll", function() {
     left_container.item(0).style.top = tmp.toString() + "px";
 
 });
+
+//marked chapter
+let marked = document.getElementById("marked_btn");
+// let note = document.getElementById('note_btn');
+
+marked.addEventListener('click', clickMarked);
+// note.addEventListener('click', clickNote);
+
+function clickMarked() {
+    let $color = marked.style;
+
+    if ($color.color === 'yellow') {
+        $color.color = 'black';
+    }
+    else $color.color = "yellow";
+}
+
+// function clickNote() {
+//     let styleNote = note.style;
+//     // let divChapter = document.getElementsByClassName("chapter");
+//     // let nameChapter = divChapter
+//     let textArea = document.getElementById('one_note_chapter_home');
+//     textArea.style.visibility = "visible";
+// }
