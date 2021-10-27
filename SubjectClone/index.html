@@ -15,23 +15,47 @@
         <img src="../logo_team_1.png" alt="Mat tieu" class="logo-header">
 
         <ul class="links-container">
-            <li><a href="#" class="my-subjects">subjects
+
+            <li class="lis" onclick="openListCourses()"><a href = 'javascript:void(0)' id="my-subjects" >subjects
+                    <i class="fas fa-caret-down"></i>
+                </a>
+                <nav id="nav-subjects">
+
+                    <i class="fas fa-times"></i>
+
+                    <ul>
+                        <li id='list-course'>
+                            <a href="#" class="link-course">Ky thuat lap trinh</a>
+                        </li>
+
+                        <li id='list-course'>
+                            <a href="#" class="link-course">HTML Tutorial</a>
+                        </li>
+
+                        <li id='list-course'>
+                            <a href="#" class="link-course">Nhap mon lap trinh</a>
+                        </li>
+
+                        <li id='list-course'>
+                            <a href="#" class="link-course">Toan roi rac va Ly thuyet do thi</a>
+                        </li>
+                    </ul>
+                </nav>
+            </li>
+
+            <li class="lis"><a id="references">references
                 <i class="fas fa-caret-down"></i>
             </a></li>
 
-            <li><a href="#" class="references">references
-                <i class="fas fa-caret-down"></i>
-            </a></li>
-
-            <li><a href="#" class="exercises">exercises
+            <li class="lis"><a id="exercises">exercises
                 <i class="fas fa-caret-down"></i>
             </a></li>
         </ul>
     </div>
 
     <div class="title-bar" id="title-bar">
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-home"></i>
+        <i class="fas fa-bars" id="fa-bars"></i>
+        <i class="fas fa-home" id="fa-home"></i>
         <span class="index">HTML</span>
     </div>
 
@@ -66,6 +90,29 @@
             <a href="">HTML Input Types</a>
             <a href="">HTML Input Attributes</a>
             <a href="">HTML Input Form Attributes</a>
+
+            <div class="container-forum" id="container-forum">
+                <i class="fas fa-users"></i>
+                <a href="../ForumPage/forum.html" class="forum" target="_blank">Forum</a>
+                
+            </div>
+
+            <div class="container-profile">
+                <a href="#" class="profile" target="_self">
+                    <i class="far fa-address-card">
+                        <span>profile</span>
+                    </i>
+                </a>
+            </div>
+
+            <div class="container-out">
+                <a href="../SignPage/signIn.html" target="_self" class="out">
+                    <i class="fas fa-sign-out-alt">
+                        <span style="font-weight: 500">sign out</span>
+                    </i>
+                </a>
+            </div>
+
         </div>
     </div>
 
@@ -105,6 +152,17 @@
             </div>
 
             <div class="chapters" id="chapter_1">
+                
+                <div class="right_tool">
+                    <i class="fas fa-pen" id='note_btn'>
+                        <span id="tooltip_pen" style="color: aliceblue;">Note</span>
+
+                        <textarea id="one_note_chapter_home" cols="50" rows="10" placeholder="Ghi chú của bạn về chương này">
+                        </textarea>
+                    </i>
+                    
+                    <i class="fas fa-star" id="marked_btn"></i>
+                </div>
                     <h2 id="editors">HTML Editors</h2>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium perspiciatis dolor quibusdam ex blanditiis animi maiores sapiente, expedita ipsam doloremque alias facilis id optio quasi adipisci mollitia sed necessitatibus facere.</p>
 
@@ -124,6 +182,18 @@
         </div>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
+    <script async>
+        function openListCourses() {
+        let contentCourse = document.getElementById('nav-subjects');
+
+        if (contentCourse.style.display != 'none') {
+            contentCourse.style.display = 'none';
+        }
+        else {
+            contentCourse.style.display = 'inline-block';
+        }
+    }
+    </script>
 </body>
 </html>

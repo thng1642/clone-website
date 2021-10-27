@@ -12,7 +12,7 @@ html {
 .header-nav {
   width: 100%;
   height: 5rem;
-  background-color: aqua;
+  background-color: #CCE2DD;
   position: relative;
   padding: 0 3%;
   display: flex;
@@ -34,7 +34,7 @@ html {
   margin-left: 1.6rem;
   height: 100%;
 }
-.links-container li {
+.links-container .lis {
   margin-left: 3rem;
   list-style: none;
   width: 8.5rem;
@@ -43,20 +43,57 @@ html {
   align-items: center;
   justify-content: center;
   transition: 0.12s;
+  cursor: pointer;
+  -webkit-user-select: none;
 }
-.links-container li a {
+.links-container .lis #my-subjects, .links-container .lis #references, .links-container .lis #exercises {
   text-decoration: none;
   text-transform: capitalize;
   position: relative;
   font-size: 1.4rem;
   font-weight: bold;
 }
-.links-container li:hover {
-  cursor: pointer;
+.links-container .lis:hover {
   background-color: rgba(82, 179, 224, 0.849);
 }
-.links-container li:hover a, .links-container li:hover .fa-caret-down {
+.links-container .lis:hover #my-subjects, .links-container .lis:hover #references, .links-container .lis:hover #exercises, .links-container .lis:hover .fa-caret-down {
   color: #fff;
+}
+.links-container #nav-subjects {
+  display: none;
+  width: 30vw;
+  height: fit-content;
+  background-color: #fcfcfc;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  cursor: auto;
+}
+.links-container #nav-subjects .fas.fa-times {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.links-container #nav-subjects ul {
+  margin: 10px;
+  padding: 0;
+}
+.links-container #nav-subjects ul #list-course {
+  margin: 10px 0;
+  list-style: none;
+  cursor: pointer;
+  width: fit-content;
+  padding: 5px;
+}
+.links-container #nav-subjects ul #list-course:hover {
+  background-color: rebeccapurple;
+}
+.links-container #nav-subjects ul .link-course {
+  text-decoration: none;
+  margin-bottom: 15px;
+  font-size: 20px;
+  width: 100%;
 }
 
 .title-bar {
@@ -73,6 +110,7 @@ html {
   font-size: 1.5rem;
   margin-left: 1rem;
   color: #fff;
+  cursor: pointer;
 }
 
 .fas.fa-bars {
@@ -97,7 +135,7 @@ html {
 .left-container-chapter .left-content-chapter {
   width: 100%;
   height: calc(100% - 3rem);
-  background-color: #7fc2b3;
+  background-color: #CCE2DD;
   display: flex;
   flex-direction: column;
   padding-left: 1rem;
@@ -113,9 +151,46 @@ html {
   font-size: 1.4rem;
   font-weight: 500;
 }
+.left-container-chapter .left-content-chapter .container-forum {
+  margin-top: 10px;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+.left-container-chapter .left-content-chapter .container-forum .fas.fa-users {
+  margin-right: 5%;
+}
+.left-container-chapter .left-content-chapter .container-forum .forum {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.left-container-chapter .left-content-chapter .container-forum:hover {
+  cursor: pointer;
+  background-color: red;
+  border-radius: 100rem;
+}
+.left-container-chapter .left-content-chapter .container-profile, .left-container-chapter .left-content-chapter .container-out {
+  margin-top: 10px;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+.left-container-chapter .left-content-chapter .container-profile .profile, .left-container-chapter .left-content-chapter .container-profile .out, .left-container-chapter .left-content-chapter .container-out .profile, .left-container-chapter .left-content-chapter .container-out .out {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.left-container-chapter .left-content-chapter .container-profile:hover, .left-container-chapter .left-content-chapter .container-out:hover {
+  cursor: pointer;
+  background-color: red;
+  border-radius: 100rem;
+}
 
 .main-content {
-  width: calc(100% - 220px);
+  width: calc(97% - 220px);
   height: 100%;
   position: absolute;
   margin-top: 3rem;
@@ -125,7 +200,7 @@ html {
   outline: #000 solid 1px;
   margin: 30px;
   padding: 10px 20px;
-  background-color: aquamarine;
+  background-color: #9cd3d3;
   line-height: 1.6;
   position: relative;
   box-shadow: -3px 5px 10px rgba(102, 100, 100, 0.692);
