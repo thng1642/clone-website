@@ -16,25 +16,25 @@
 
     <body>
         <nav class="navbar">
-            <img class="logo" src="../logo_team_1.png">
+            <img class="logo" src="/images/logo_team_1.png">
 
-            <!-- <ul class="nav-links">
-                <li class="nav-items">
+            <ul class="nav-links">
+                <!-- <li class="nav-items">
                     <a href="#">My home</a>
-                </li>
+                </li> -->
                 <li class="nav-items">
-                    <a href="#">My courses</a>
+                    <a href="../HomeCourse/index.html">My courses</a>
                 </li>
-                <li class="nav-items">
+                <!-- <li class="nav-items">
                     <a href="#">Tutorials</a>
-                </li>
-                <li class="nav-items">
+                </li> -->
+                <!-- <li class="nav-items">
                     <a href="#">Time table</a>
                 </li>
                 <li class="nav-items">
                     <a href="#">My team</a>
-                </li>
-            </ul> -->
+                </li> -->
+            </ul>
             <div class="right-content">
                 <input type="text" class="search-box" placeholder="Search">               
                 <ion-icon class="nofi" name="notifications-outline"></ion-icon>
@@ -234,6 +234,9 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
         <script>
+
+            alert('Click on "My courses" (at header, on the right logo) go to continue web page');
+
             var nav_bar = document.getElementsByClassName("navbar");
             window.addEventListener("scroll", function(event) {
                 var scroll_y = this.scrollY;
