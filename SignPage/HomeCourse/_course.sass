@@ -1,0 +1,109 @@
+.last-courses
+    display: flex
+    height: 350px
+    width: calc(100% - 10px)
+    position: relative
+    margin: 100px 10px 0
+    // background: rgb(30, 30, 30)
+.last-courses::after
+    content: ""
+    position: absolute
+    right: 0
+    top: 0
+    width: 5px
+    border-radius: 5px
+    height: 300px
+    background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%)
+    box-shadow: -10px 0 20px 3px #000
+.header-card
+    position: relative
+    display: flex
+    flex: 0 0 230px
+    width: 230px
+    flex-direction: column
+    // margin-left: 10px
+    // justify-content: flex-end
+    // padding-bottom: 30px
+    margin-right: 35px
+    .img-course
+        width: 100%
+        height: 100%
+        position: relative
+        object-fit: cover
+        border-radius: 8px
+        z-index: 3
+        // transform: translateY(-30px)
+.header-card::before
+    content: ""
+    background: linear-gradient(130deg, #ff7a18,#af002d 41.07%, #319197 76.05%)
+    position: absolute
+    z-index: 2
+    width: calc(100% + 10px)
+    height: calc(100% + 10px)
+    top: -5px
+    left: -5px
+    border-radius: 12px
+
+.header-card::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #000
+    z-index: 2
+    border-radius: 8px
+
+.list-mini-card
+    width: 100%
+    position: relative
+    background: rgb(38, 38, 38)
+    display: flex
+    flex-wrap:  nowrap
+    margin-left: -30px
+    overflow-x: scroll
+.mini-card
+    border-radius: 12px
+    min-width: 275px
+    height: 310px
+    margin-left: 30px
+    overflow: hidden
+    background: rgb(56, 56, 56)
+    color: #fff
+
+.card-image
+    height: 150px
+    width: 100%
+    object-fit: cover
+
+.card-user
+    position: relative
+    display: flex
+    padding: 0 0 15px 15px
+    border-bottom: 0.75px solid black
+
+.card-title
+    display: inline
+    margin-left: 15px
+
+.card-info
+    display: flex
+    flex-direction: column
+    margin-left: 15px
+
+.card-avatar
+    width: 50px
+    height: 50px
+    border-radius: 100rem
+    margin: auto 0
+
+.user-name
+    display: flex
+    align-items: center
+    margin: auto
+    height: 50px
+
+.members
+    padding-left: 15px
+

@@ -1,0 +1,94 @@
+@mixin card($back-color)
+    height: 301.58px
+    width: 220px
+    background-color: $back-color
+    margin-left: 100px
+    margin-bottom: 50px
+    position: relative
+
+@mixin card_img()
+    width: 200px
+    height: 200px
+    margin-left: 10px
+    margin-top: 10px
+
+@mixin card_content($back-color)
+    display: flex
+    position: relative
+    margin-top: -30px
+    flex-direction: column
+    width: 200px
+    margin-left: 10px
+    align-items: center
+    background: $back-color
+    
+.task-container
+    position: relative
+    width: 100%
+    // height: 400px
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    // outline: 1px solid #000
+    margin-bottom: 50px
+    // overflow-x: auto
+    margin-top: 70px
+    //background-color: #eb9e90
+    .title-top-task 
+        width: 100%
+        height: 300px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+        background-color: #383838
+        img
+            width: 500px
+            height: 300px
+        div 
+            width: 310px
+            h3
+                font-size: 2.5rem
+            p
+                font-size: 1.2rem
+        
+    .list-task
+        width: inherit
+        margin-top: 100px
+        // margin-left: 20px
+        margin-left: -50px
+        //margin-right: 20px
+        display: flex
+        flex-direction: row
+        justify-content: center
+        flex-wrap: wrap
+        .card.quiz
+            @include card(#e29696)
+            .fas.fa-star
+                position: absolute
+                right: 10px
+                top: 10px
+                
+            img
+                @include card_img()                
+            .card-content
+                @include card_content(linear-gradient(170.12deg, rgba(249, 170, 184, 0.89) 49.64%, rgba(207, 176, 176, 0.17) 89.28%))
+                // background: linear-gradient(170.12deg, rgba(249, 170, 184, 0.89) 49.64%, rgba(207, 176, 176, 0.17) 89.28%)
+        .card.assignment 
+            @include card($back-color: #fff)
+            .fas.fa-star
+                position: absolute
+                right: 10px
+                top: 10px
+            img
+                @include card_img()
+            .card-content
+                @include card_content(radial-gradient(73% 77.23% at 20% 49.52%, rgba(113, 172, 228, 0.86) 0%, #55B6FA 53.17%, rgba(155, 192, 227, 0.71) 100%)) 
+                // background: radial-gradient(73% 77.23% at 20% 49.52%, rgba(113, 172, 228, 0.86) 0%, #55B6FA 53.17%, rgba(155, 192, 227, 0.71) 100%)
+        .card.test
+            @include card(#fff)
+            img
+                @include card_img()
+            .card-content
+                @include card_content(#fff)
+                

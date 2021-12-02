@@ -1,3 +1,109 @@
+.main-content {
+  width: calc(97% - 220px);
+  height: 100%;
+  position: absolute;
+  margin-top: 3rem;
+  left: 220px;
+}
+.main-content .chapters {
+  outline: #000 solid 1px;
+  margin: 30px;
+  padding: 10px 20px;
+  background-color: #9cd3d3;
+  line-height: 1.6;
+  position: relative;
+  box-shadow: -3px 5px 10px rgba(102, 100, 100, 0.692);
+  border-radius: 3px;
+}
+.main-content .chapters .chapters > h2 {
+  font-size: 2rem;
+}
+.main-content .chapters .des-content {
+  font-size: 1.3rem;
+}
+.main-content .chapters .right_tool {
+  right: 0;
+  width: 4rem;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+}
+.main-content .chapters .right_tool #tooltip_pen {
+  background-color: #000;
+  width: 3rem;
+  position: absolute;
+  bottom: 100%;
+  left: 6%;
+  margin-left: -8px;
+  text-align: center;
+  padding: 5px;
+  border-radius: 3px;
+  visibility: hidden;
+  font-weight: 500;
+}
+.main-content .chapters #note_btn:hover #tooltip_pen {
+  visibility: visible;
+}
+.main-content .chapters #one_note_chapter_home {
+  display: none;
+  position: absolute;
+  right: 32px;
+  top: 16px;
+  resize: none;
+  padding: 10px;
+}
+
+.content-intro .img-word, .content-intro .img-pdf, .content-intro .img-ppt {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.ref-document .img-yt {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.container-task {
+  position: relative;
+  display: flex;
+  height: 40px;
+  margin-left: calc(100% - 220px);
+}
+.container-task form {
+  display: flex;
+}
+.container-task .btn-quiz {
+  transition: 0.92s;
+  position: relative;
+  width: 100px;
+  margin-right: 20px;
+  cursor: pointer;
+  border-style: none;
+  background-color: #213ddd;
+  color: #fff;
+}
+.container-task .btn-quiz:hover {
+  box-shadow: -5px 5px #222020;
+  transform: translate(5px, -5px);
+}
+.container-task .btn-assignment {
+  position: relative;
+  transition: 0.92s;
+  cursor: pointer;
+  border-style: none;
+  background-color: #13c439;
+  color: #fff;
+}
+.container-task .btn-assignment:hover {
+  box-shadow: -5px 5px #222020;
+  transform: translate(5px, -5px);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -34,66 +140,44 @@ html {
   margin-left: 1.6rem;
   height: 100%;
 }
-.links-container .lis {
-  margin-left: 3rem;
-  list-style: none;
-  width: 8.5rem;
+.links-container .dropdown-subjects {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.12s;
+  height: 100%;
+}
+.links-container .dropdown-subjects #btn-subject {
+  height: 100%;
+  position: relative;
+  width: 145px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-style: none;
   cursor: pointer;
-  -webkit-user-select: none;
+  background-color: transparent;
+  transition: all 0.92s;
 }
-.links-container .lis #my-subjects, .links-container .lis #references, .links-container .lis #exercises {
-  text-decoration: none;
-  text-transform: capitalize;
-  position: relative;
-  font-size: 1.4rem;
-  font-weight: bold;
+.links-container .dropdown-subjects #btn-subject:hover, .links-container .dropdown-subjects #btn-subject:focus {
+  background-color: #7bcf8d;
 }
-.links-container .lis:hover {
-  background-color: rgba(82, 179, 224, 0.849);
-}
-.links-container .lis:hover #my-subjects, .links-container .lis:hover #references, .links-container .lis:hover #exercises, .links-container .lis:hover .fa-caret-down {
-  color: #fff;
-}
-.links-container #nav-subjects {
+.links-container .dropdown-subjects .content-subject {
   display: none;
-  width: 30vw;
-  height: fit-content;
-  background-color: #fcfcfc;
   position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 20;
-  cursor: auto;
+  background-color: #e5f1ef;
+  min-width: 160px;
+  z-index: 1000;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
-.links-container #nav-subjects .fas.fa-times {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-.links-container #nav-subjects ul {
-  margin: 10px;
-  padding: 0;
-}
-.links-container #nav-subjects ul #list-course {
-  margin: 10px 0;
-  list-style: none;
-  cursor: pointer;
-  width: fit-content;
-  padding: 5px;
-}
-.links-container #nav-subjects ul #list-course:hover {
-  background-color: rebeccapurple;
-}
-.links-container #nav-subjects ul .link-course {
+.links-container .dropdown-subjects .content-subject a {
+  color: black;
+  padding: 12px 16px;
   text-decoration: none;
-  margin-bottom: 15px;
-  font-size: 20px;
-  width: 100%;
+  display: block;
+}
+.links-container .dropdown-subjects .content-subject a:hover {
+  background-color: #9ce9cf;
+}
+.links-container .dropdown-subjects .show {
+  display: block;
 }
 
 .title-bar {
@@ -187,55 +271,6 @@ html {
   cursor: pointer;
   background-color: red;
   border-radius: 100rem;
-}
-
-.main-content {
-  width: calc(97% - 220px);
-  height: 100%;
-  position: absolute;
-  margin-top: 3rem;
-  left: 220px;
-}
-.main-content .chapters {
-  outline: #000 solid 1px;
-  margin: 30px;
-  padding: 10px 20px;
-  background-color: #9cd3d3;
-  line-height: 1.6;
-  position: relative;
-  box-shadow: -3px 5px 10px rgba(102, 100, 100, 0.692);
-  border-radius: 3px;
-}
-.main-content .chapters .right_tool {
-  right: 0;
-  width: 4rem;
-  position: absolute;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-around;
-}
-.main-content .chapters .right_tool #tooltip_pen {
-  background-color: #000;
-  width: 3rem;
-  position: absolute;
-  bottom: 100%;
-  left: 6%;
-  margin-left: -8px;
-  text-align: center;
-  padding: 5px;
-  border-radius: 3px;
-  visibility: hidden;
-  font-weight: 500;
-}
-.main-content .chapters #note_btn:hover #tooltip_pen {
-  visibility: visible;
-}
-.main-content .chapters #one_note_chapter_home {
-  visibility: hidden;
-  position: absolute;
-  right: 32px;
-  top: 16px;
-  resize: none;
 }
 
 /*# sourceMappingURL=style.css.map */

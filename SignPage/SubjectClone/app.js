@@ -27,12 +27,13 @@ for (let i = 0; i < marked.length; i++) {
     marked[i].addEventListener('click', clickMarked);
 
     function clickMarked() {
-        let $color = marked[i].style;
+        // let $color = marked[i].style;
+        let $color = window.getComputedStyle(marked[i]);
 
-        if ($color.color === 'yellow') {
-            $color.color = 'black';
+        if ($color.color === "rgb(255, 255, 0)") {
+           marked[i].style.color = 'black';
         }
-        else $color.color = 'yellow';
+        else marked[i].style.color = 'yellow';
     }
 }
 
@@ -69,15 +70,30 @@ function openForum() {
 //         }
 //     }
 
+// content  note chapters
+let note = document.getElementsByClassName('fa-pen');
 
-// let note = document.getElementById('note_btn');
-// note.addEventListener('click', clickNote);
+for (let i = 0; i < note.length; i++) {
+    const element = note[i];
 
+    element.addEventListener('click', openListCourse);
 
-// function clickNote() {
-//     let styleNote = note.style;
-//     // let divChapter = document.getElementsByClassName("chapter");
-//     // let nameChapter = divChapter
-//     let textArea = document.getElementById('one_note_chapter_home');
-//     textArea.style.visibility = "visible";
-// }
+    function openListCourse() {
+        let textArea = element.childNodes[3];
+
+        if (window.getComputedStyle(textArea).display == 'none') {
+            textArea.style.display = 'inline-block';
+        }
+        else {
+            textArea.style.display = 'none';
+        }
+
+    } 
+}
+
+// dropdown subject 
+let btnSubject=document.getElementById('btn-subject');
+btnSubject.addEventListener('click', dropdownFun);
+function dropdownFun() {
+    document.getElementsByClassName('content-subject')[0].classList.toggle('show');
+}
